@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { references, referencesByCategory, referenceStats } from '@/data'
+import { references, referenceStats } from '@/data'
 import type { Reference } from '@/types'
 import ReferenceDetailModal from '../modals/ReferenceDetailModal.vue'
 

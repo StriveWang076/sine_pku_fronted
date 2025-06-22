@@ -81,7 +81,7 @@ const toggleMenu = () => {
       >
         <!-- 動態生成導航選項 -->
         <button
-          v-for="(section, index) in sections"
+          v-for="section in sections"
           :key="section.id"
           class="nav-item"
           :class="{ 

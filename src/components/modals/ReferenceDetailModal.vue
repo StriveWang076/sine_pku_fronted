@@ -10,7 +10,7 @@ interface Emits {
   (e: 'close'): void
 }
 
-const props = defineProps<Props>()
+defineProps<Props>()
 const emit = defineEmits<Emits>()
 
 // 複製 DOI 到剪貼簿
