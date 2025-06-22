@@ -1,0 +1,247 @@
+/* 展示容器主樣式 */
+.showcase-container {
+  max-width: 1200px; /* 最大寬度限制 */
+  margin: 0 auto; /* 水平居中 */
+  padding: 40px 20px; /* 上下左右內邊距 */
+}
+
+/* 頁面標題區域樣式 */
+.section-header {
+  text-align: center; /* 文字居中 */
+  margin-bottom: 40px; /* 下方間距 */
+}
+
+/* 頁面主標題樣式 */
+.section-title {
+  font-size: 2.5rem; /* 字體大小 */
+  font-weight: bold; /* 粗體 */
+  color: white; /* 白色文字 */
+  margin-bottom: 10px; /* 下方間距 */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* 文字陰影 */
+}
+
+/* 頁面副標題樣式 */
+.section-subtitle {
+  font-size: 1.2rem; /* 字體大小 */
+  color: rgba(255, 255, 255, 0.9); /* 半透明白色 */
+  margin: 0; /* 移除預設邊距 */
+}
+
+/* 內容網格佈局：響應式設計 */
+.content-grid {
+  display: grid;
+  /* 自動適應列數，每列最小寬度350px */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px; /* 網格間距 */
+}
+
+/* 卡片基礎樣式 */
+.card {
+  background: rgba(255, 255, 255, 0.95); /* 半透明白色背景 */
+  border-radius: 20px; /* 圓角 */
+  padding: 30px; /* 內邊距 */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+  backdrop-filter: blur(10px); /* 背景模糊 */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* 邊框 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 過渡動畫 */
+}
+
+/* 卡片懸停效果 */
+.card:hover {
+  transform: translateY(-5px); /* 向上移動 */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); /* 增強陰影 */
+}
+
+/* 卡片標題樣式 */
+.card h3 {
+  color: #1e3a8a; /* 深藍色 */
+  font-size: 1.5rem; /* 字體大小 */
+  margin-bottom: 20px; /* 下方間距 */
+  font-weight: 600; /* 字體粗細 */
+}
+
+/* 卡片副標題樣式 */
+.card h4 {
+  color: #374151; /* 深灰色 */
+  font-size: 1.1rem; /* 字體大小 */
+  margin-bottom: 8px; /* 下方間距 */
+  font-weight: 500; /* 字體粗細 */
+}
+
+/* 卡片段落文字樣式 */
+.card p {
+  color: #6b7280; /* 中灰色 */
+  line-height: 1.6; /* 行高 */
+  margin-bottom: 15px; /* 下方間距 */
+}
+
+/* 卡片列表樣式 */
+.card ul {
+  list-style: none; /* 移除預設列表樣式 */
+  padding: 0; /* 移除預設內邊距 */
+}
+
+/* 卡片列表項目樣式 */
+.card li {
+  color: #6b7280; /* 中灰色 */
+  padding: 8px 0; /* 上下內邊距 */
+  border-bottom: 1px solid rgba(107, 114, 128, 0.1); /* 底部分隔線 */
+  position: relative; /* 相對定位 */
+  padding-left: 20px; /* 左側內邊距，為圓點留空間 */
+}
+
+/* 列表項目前的圓點樣式 */
+.card li::before {
+  content: '•'; /* 圓點符號 */
+  color: #3b82f6; /* 藍色 */
+  font-weight: bold; /* 粗體 */
+  position: absolute; /* 絕對定位 */
+  left: 0; /* 靠左對齊 */
+}
+
+/* 關鍵字標籤容器 */
+.keywords {
+  display: flex;
+  flex-wrap: wrap; /* 允許換行 */
+  gap: 8px; /* 標籤間距 */
+  margin-top: 15px; /* 上方間距 */
+}
+
+/* 關鍵字標籤樣式 */
+.keyword-tag {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8); /* 漸層背景 */
+  color: white; /* 白色文字 */
+  padding: 6px 12px; /* 內邊距 */
+  border-radius: 20px; /* 圓角 */
+  font-size: 0.9rem; /* 字體大小 */
+  font-weight: 500; /* 字體粗細 */
+}
+
+/* 技能標籤容器 */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap; /* 允許換行 */
+  gap: 8px; /* 標籤間距 */
+  margin-top: 10px; /* 上方間距 */
+}
+
+/* 技能標籤樣式 */
+.skill-tag {
+  background: rgba(59, 130, 246, 0.1); /* 淡藍色背景 */
+  color: #3b82f6; /* 藍色文字 */
+  padding: 6px 12px; /* 內邊距 */
+  border-radius: 15px; /* 圓角 */
+  font-size: 0.9rem; /* 字體大小 */
+  border: 1px solid rgba(59, 130, 246, 0.2); /* 邊框 */
+}
+
+/* 教育、經驗、論文項目樣式 */
+.education-item, .experience-item, .publication-item {
+  margin-bottom: 20px; /* 下方間距 */
+  padding-bottom: 20px; /* 下方內邊距 */
+  border-bottom: 1px solid rgba(107, 114, 128, 0.1); /* 底部分隔線 */
+}
+
+/* 最後一個項目移除分隔線 */
+.education-item:last-child, .experience-item:last-child, .publication-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* GPA 分數樣式 */
+.gpa {
+  color: #3b82f6; /* 藍色 */
+  font-weight: 500; /* 字體粗細 */
+}
+
+/* 機構資訊樣式 */
+.institution {
+  color: #6b7280; /* 中灰色 */
+  font-size: 0.9rem; /* 字體大小 */
+  margin-bottom: 8px; /* 下方間距 */
+}
+
+/* 論文狀態標籤樣式 */
+.status {
+  background: #10b981; /* 綠色背景 */
+  color: white; /* 白色文字 */
+  padding: 4px 8px; /* 內邊距 */
+  border-radius: 10px; /* 圓角 */
+  font-size: 0.8rem; /* 字體大小 */
+  font-weight: 500; /* 字體粗細 */
+}
+
+/* 技能分組樣式 */
+.skill-group {
+  margin-bottom: 20px; /* 下方間距 */
+}
+
+/* 最後一個技能分組移除間距 */
+.skill-group:last-child {
+  margin-bottom: 0;
+}
+
+/* 聯絡資訊項目樣式 */
+.contact-item {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  margin-bottom: 15px; /* 下方間距 */
+  padding: 10px 0; /* 上下內邊距 */
+}
+
+/* 聯絡標籤樣式 */
+.contact-label {
+  font-weight: 600; /* 字體粗細 */
+  color: #374151; /* 深灰色 */
+  min-width: 100px; /* 最小寬度 */
+}
+
+/* 聯絡連結樣式 */
+.contact-item a {
+  color: #3b82f6; /* 藍色 */
+  text-decoration: none; /* 移除下劃線 */
+  transition: color 0.3s ease; /* 顏色過渡動畫 */
+}
+
+/* 聯絡連結懸停效果 */
+.contact-item a:hover {
+  color: #1d4ed8; /* 深藍色 */
+  text-decoration: underline; /* 添加下劃線 */
+}
+
+/* 移動端響應式設計 */
+@media (max-width: 768px) {
+  /* 調整容器內邊距 */
+  .showcase-container {
+    padding: 20px 15px;
+  }
+  
+  /* 調整標題字體大小 */
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  /* 調整網格為單列佈局 */
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* 調整卡片內邊距 */
+  .card {
+    padding: 20px;
+  }
+  
+  /* 調整聯絡項目為垂直排列 */
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* 調整聯絡標籤樣式 */
+  .contact-label {
+    min-width: auto;
+    margin-bottom: 5px;
+  }
+} 

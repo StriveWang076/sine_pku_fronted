@@ -1,0 +1,342 @@
+/* Modal 樣式 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: var(--background-color);
+  border-radius: var(--border-radius-lg);
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 0 24px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.modal-close:hover {
+  background: var(--background-light);
+  color: var(--text-color);
+}
+
+.modal-body {
+  padding: 0 24px;
+}
+
+.detail-section {
+  margin-bottom: 24px;
+}
+
+.detail-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.detail-authors {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.detail-meta {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--background-light);
+  border-radius: var(--border-radius-md);
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.meta-label {
+  font-weight: 600;
+  color: var(--text-color);
+  min-width: 100px;
+}
+
+.meta-value {
+  color: var(--text-light);
+}
+
+.category-tag {
+  padding: 4px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+}
+
+.category-research {
+  background: #3b82f6;
+}
+
+.category-methodology {
+  background: #10b981;
+}
+
+.category-background {
+  background: #f59e0b;
+}
+
+.category-related {
+  background: #8b5cf6;
+}
+
+.doi-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.doi-link:hover {
+  color: var(--secondary-color);
+}
+
+/* 新增的詳細項目樣式 */
+.detail-section-item {
+  margin-bottom: 24px;
+  padding: 20px;
+  background: var(--background-light);
+  border-radius: var(--border-radius-md);
+  border-left: 4px solid var(--primary-color);
+}
+
+.section-item-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 12px;
+}
+
+.section-icon {
+  font-size: 1.2rem;
+}
+
+.section-item-content {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* 為不同項目設置不同的邊框顏色 */
+.detail-section-item:nth-child(5) {
+  border-left-color: #3b82f6; /* 摘要 - 藍色 */
+}
+
+.detail-section-item:nth-child(6) {
+  border-left-color: #10b981; /* 背景 - 綠色 */
+}
+
+.detail-section-item:nth-child(7) {
+  border-left-color: #f59e0b; /* 動機 - 橙色 */
+}
+
+.detail-section-item:nth-child(8) {
+  border-left-color: #8b5cf6; /* 方法 - 紫色 */
+}
+
+.detail-section-item:nth-child(9) {
+  border-left-color: #ef4444; /* 效益 - 紅色 */
+}
+
+.detail-keywords {
+  margin-bottom: 24px;
+}
+
+.detail-keywords h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 12px;
+}
+
+.keywords-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.keyword-tag {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--primary-color);
+  padding: 6px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.detail-citations {
+  margin-bottom: 24px;
+}
+
+.detail-citations h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.detail-citations p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 12px;
+  padding: 20px 24px 24px 24px;
+  border-top: 1px solid var(--border-color);
+  justify-content: flex-end;
+}
+
+.modal-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.primary-btn {
+  background: var(--primary-color);
+  color: white;
+}
+
+.primary-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  background: var(--background-light);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.secondary-btn:hover {
+  background: var(--border-color);
+  transform: translateY(-1px);
+}
+
+.close-btn {
+  background: var(--text-light);
+  color: white;
+}
+
+.close-btn:hover {
+  background: var(--text-color);
+  transform: translateY(-1px);
+}
+
+/* Modal 響應式設計 */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    max-height: 95vh;
+  }
+  
+  .modal-header {
+    padding: 20px 20px 0 20px;
+  }
+  
+  .modal-body {
+    padding: 0 20px;
+  }
+  
+  .modal-footer {
+    padding: 16px 20px 20px 20px;
+    flex-direction: column;
+  }
+  
+  .modal-btn {
+    width: 100%;
+  }
+  
+  .detail-meta {
+    grid-template-columns: 1fr;
+  }
+  
+  .meta-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .meta-label {
+    min-width: auto;
+  }
+  
+  .detail-section-item {
+    padding: 16px;
+  }
+} 
